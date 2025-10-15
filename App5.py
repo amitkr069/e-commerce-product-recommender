@@ -19,7 +19,7 @@ load_dotenv()
 set_verbose(True)
 
 # --- MongoDB Configuration ---
-MONGO_URI = st.secrets.get("MONGO_URL") or os.getenv("MONGO_URL")
+MONGO_URI = st.secrets.get("MONGO_URL", "localhost:27017") or os.getenv("MONGO_URL", "localhost:27017")
 DATABASE_NAME = "Product_recommender"
 
 # --- LLM Key ---
