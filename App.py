@@ -64,7 +64,7 @@ def initialize_llm_chain():
 
     try:
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             temperature=0.2,
             max_output_tokens=80,
             google_api_key=LLM_API_KEY
