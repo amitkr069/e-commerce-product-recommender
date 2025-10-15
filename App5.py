@@ -19,11 +19,11 @@ load_dotenv()
 set_verbose(True)
 
 # --- MongoDB Configuration ---
-MONGO_URI = os.getenv("MONGO_URL")
+MONGO_URI = st.secrets.get("MONGO_URL") or os.getenv("MONGO_URL")
 DATABASE_NAME = "Product_recommender"
 
 # --- LLM Key ---
-LLM_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+LLM_API_KEY = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
 # --- Database & Data Initialization ---
 @st.cache_resource
