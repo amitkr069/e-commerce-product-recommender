@@ -1,6 +1,6 @@
 # e-commerce-product-recommender
 
-Project Overview
+**Overview**
 
   The E-Commerce Product Recommender System is an intelligent web application that suggests relevant products to users by combining Content-Based Filtering (CBF) and Collaborative Filtering (CF) techniques.
   
@@ -8,7 +8,7 @@ Project Overview
   
   This hybrid design ensures recommendations are not only personalized but also interpretable, helping users understand why each product was recommended.
 
-Key Features
+**Key Features**
 
  Hybrid Recommendation Engine — Combines Content-Based Filtering (product similarity) and Collaborative Filtering (user interaction similarity).
  
@@ -26,7 +26,7 @@ Key Features
 
 
 
-Database Structure
+**Database Structure**
 
 1. users Collection
 
@@ -68,7 +68,7 @@ strores interacion of users - the prodcuts they purchased or viewed
 }
 
 
-Recommendation Logic
+**Recommendation Logic**
 
 The system combines two filtering strategies with different weights:
 
@@ -107,7 +107,7 @@ The system combines two filtering strategies with different weights:
   Limited to top 5 recommendations per user-product combination
 
 
-LLM Explanation Generation
+**LLM Explanation Generation**
 
   Each recommended product is passed to Gemini 2.0 Flash via LangChain.
   
@@ -118,7 +118,7 @@ LLM Explanation Generation
   “The Smart Home Camera Pro fits your interest in smart home devices and is highly rated by users similar to you.”
 
 
-Algorithm Flow
+**Algorithm Flow**
 
 1. Initialize MongoDB Connection
 
@@ -147,7 +147,7 @@ Algorithm Flow
   Final table shows product name, and the LLM-generated explanation.
 
 
-Tech Stack
+**Tech Stack**
 
 | Component                 | Technology Used               |
 | ------------------------- | ----------------------------- |
