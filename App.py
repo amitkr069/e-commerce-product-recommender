@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 from typing import List, Dict, Any
 from sklearn.metrics.pairwise import cosine_similarity
-# import logging
+
 
 # --- LangChain / Gemini Imports ---
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -185,8 +185,6 @@ def main():
     user_email = st.sidebar.selectbox("Select User Email", options=[None] + USERS_DF['email'].tolist())
     product_name = st.sidebar.selectbox("Select a Product", options=[None] + PRODUCTS_DF['name'].tolist())
 
-    # llm_status_message = "🟢 LLM Ready (Gemini)" if EXPLAINER_CHAIN else "🔴 LLM Fallback Active"
-    # st.sidebar.markdown(f"**LLM Status:** {llm_status_message}")
 
     if user_email and product_name:
         user_data = USERS_DF.loc[USERS_DF['email'] == user_email].iloc[0]
@@ -205,7 +203,6 @@ def main():
             st.info(f"No recommendations available for {user_email} and product '{product_name}'.")
             return
 
-        # st.success(f"Generated {len(recommendation_list)} recommendations.")
         st.subheader("Recommended Products")
 
         data = []
@@ -214,7 +211,6 @@ def main():
                 llm_explanation = call_gemini_service_lc(rec['product_name'], rec['raw_context'])
                 data.append({
                     "Product Name": rec["product_name"],
-                    # "Product ID": rec["product_id"],
                     "Why this product!!": llm_explanation
                 })
 
@@ -222,8 +218,7 @@ def main():
         st.table(results_df)
 
         st.markdown("---")
-        # st.subheader("Debugging Context")
-        # st.info("The context used for LLM explanations is shown in code execution above.")
+
 
     else:
         st.info("Select both a user email and a product from the sidebar to begin.")
