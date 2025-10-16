@@ -11,6 +11,7 @@ _________
   The app uses MongoDB for data storage, Streamlit for the frontend, and Google’s Gemini (via LangChain) to generate concise, natural-language explanations for each recommendation.
   
   This hybrid design ensures recommendations are not only personalized but also interpretable, helping users understand why each product was recommended.
+________
 
 **Key Features**
 
@@ -28,7 +29,7 @@ _________
  
  Cached Resources — Optimizes performance using Streamlit’s caching for database and model initialization.
 
-
+_________
 
 **Database Structure**
 
@@ -71,6 +72,7 @@ strores interacion of users - the prodcuts they purchased or viewed
   "value": 1
 }
 
+_________
 
 **Recommendation Logic**
 
@@ -110,6 +112,7 @@ The system combines two filtering strategies with different weights:
   
   Limited to top 5 recommendations per user-product combination
 
+_________
 
 **LLM Explanation Generation**
 
@@ -121,6 +124,7 @@ The system combines two filtering strategies with different weights:
   
   “The Smart Home Camera Pro fits your interest in smart home devices and is highly rated by users similar to you.”
 
+___________
 
 **Algorithm Flow**
 
@@ -150,6 +154,7 @@ The system combines two filtering strategies with different weights:
 
   Final table shows product name, and the LLM-generated explanation.
 
+__________
 
 **Tech Stack**
 
