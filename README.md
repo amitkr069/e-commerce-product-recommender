@@ -3,7 +3,7 @@
 **Video Demo** - https://drive.google.com/file/d/1JlV3RXIDO6DgERLiQ9_PGWbDhFmn7ChW/view?usp=sharing
 
 **Website Link** - https://e-commerce-pro-duct-recommender-amit-kumar-mandal.streamlit.app/
-
+_________
 **Overview**
 
   The E-Commerce Product Recommender System is an intelligent web application that suggests relevant products to users by combining Content-Based Filtering (CBF) and Collaborative Filtering (CF) techniques.
